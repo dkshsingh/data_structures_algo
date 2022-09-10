@@ -1,4 +1,4 @@
-# data_structures_algo(in Python)
+# data_structures_algo_problems(in Python)
 ## 1. Kadane's Algorithm(Python Code)
 ## * Maximum Subarray Sum
          Input : 9(size of array)
