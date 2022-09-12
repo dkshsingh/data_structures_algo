@@ -110,9 +110,21 @@
                 return [lo, hi]
                 
         return [-1, -1]
-
-
-
+## 4. String
+## * Convert string
+      Input: 3  (test cases)
+             I love programming
+             they are playing cricket
+             good to see you
+     Output: I Love Programming
+             They Are Playing Cricket
+             Good To See You
+### code:  
+           def convertString(str):
+               Ist = [word[0].upper()+word[1:] for word in str.split()]
+               str = " ".join(Ist)
+           return str
+           pass
 
 
 
