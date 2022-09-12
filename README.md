@@ -125,7 +125,27 @@
                str = " ".join(Ist)
            return str
            pass
-
-
+## * Encode the message
+      Input: 3
+             aabbc
+             abcd
+             abbdcaas
+      Output: a2b2c1
+              a1b1c1d1
+              a1b2d1c1a2s1
+### code:
+          def encode(message):
+              result=""
+              num = len(message)
+              i=0 
+              while i <num :
+                  k = 1  
+                  while (i <num-1 and message[i]== message[i+1]) :
+                      k+= 1
+                      i+=1 
+                   result += ((message[i])+str(k))  #,end=""
+                   i+=1
+              return result  
+              pass
 
 
