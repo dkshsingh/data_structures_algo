@@ -25,6 +25,23 @@
                 return 0
             else:
                 return maxsum
+ ### code:(kadane algorithm)
+    class Solution:
+    ##Complete this function
+    #Function to find the sum of contiguous subarray with maximum sum.
+    def maxSubArraySum(self,arr,N, ):
+        ##Your code here
+        cur_sum=0
+        maxSum = arr[0]
+        for i in range(0,N):
+            cur_sum += arr[i]
+            maxSum = max(maxSum , cur_sum)
+            
+            if cur_sum < 0:
+                cur_sum = 0
+        return maxSum       
+ 
+ 
 ## 2. Dutch national flag algorithm
 ## * Sort 0 1 2
       Input : 6(size of array)
