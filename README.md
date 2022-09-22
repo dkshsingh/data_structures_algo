@@ -56,6 +56,36 @@
            else:
                return arr
 ## 3. Searching and sorting
+## * binary search(c++)
+      Input:                                                Input:
+      N = 5                                                 N=5
+      arr[] = {1 2 3 4 5}                                   arr[] = {11 22 33 44 55} 
+      K = 4                                                 k = 445
+      Output: 3                                             output: -1
+      Explanation: 4 appears at index 3.                    Explanation: 445 is not present.
+
+### code:
+         class Solution {
+         public:
+             int binarysearch(int arr[], int n, int k) {
+             // code here
+                 int l=0,h=n-1;
+                 while(l<=h){
+                     int mid=l+(h-l)/2;
+                     if(arr[mid]==k)
+                     return mid;
+                     if(arr[mid]<k)
+                     l=mid+1;
+                     if(arr[mid]>k)
+                     h=mid-1;
+                    }
+                return -1;
+                }
+             };
+
+
+
+
 ## * Search In Rotated Sorted Array(Binary Search)
       Input: 4
       Arr: 2 5 -3 0
